@@ -1,0 +1,148 @@
+create table users(
+id int primary key auto_increment,
+username varchar(200),
+firstname varchar(200),
+midname varchar(200),
+lastname varchar(200),
+email varchar(200),
+password varchar(200),
+age int,
+bg varchar(10),
+rh varchar(100),
+cno varchar(200),
+altcno varchar(200),
+address varchar(200),
+disability varchar(200),
+logintime datetime
+);
+
+insert into users(id,username,firstname,lastname,email,password,age,bg,rh,cno)
+ values(
+1,'Dexter','Diptesh','Sen','valtvalt@gmail.aom','111',55,'AB','Positive','98568');
+
+create table notification(
+requestid int primary key auto_increment,
+announcement varchar(500),
+bg varchar(10),
+rh varchar(100),
+time datetime,
+response int
+);
+
+insert into notification values(
+1,
+'There is a sudden shortage in AB+ blood group. Urgent help is needed.',
+'AB',
+'Positive',
+'2023-04-29 13:00:15',
+0
+); 
+
+
+insert into notification(announcement,bg,rh,time,response) values(
+'Urgently need A+ blood group.Please help.',
+'A',
+'Positive',
+'2023-04-29 18:01:34',
+0
+); 
+
+
+create table response(
+username varchar(200),
+reqid int,
+id int,
+firstname varchar(200),
+midname varchar(200),
+lastname varchar(200),
+bg varchar(10),
+rh varchar(100),
+cno varchar(200)
+);
+
+create table admin(
+adminid int primary key auto_increment,
+username varchar(200),
+password varchar(200),
+logintime datetime,
+firstname varchar(200),
+midname varchar(200),
+lastname varchar(200),
+email varchar(200),
+cno varchar(200),
+altcno varchar(200),
+age int,
+disability varchar(200),
+address varchar(200)
+);
+
+insert into admin values(1,'Diptesh','1','2023-04-30 13:04:14','','','','','','',20,'','');
+
+create table request(
+requestid int primary key auto_increment,
+userid int,
+username varchar(200),
+bg varchar(20),
+rh varchar(50),
+contactno varchar(50),
+description varchar(200),
+reqdate datetime);
+
+create table donor(
+requestid int primary key auto_increment,
+userid int,
+username varchar(200),
+bg varchar(20),
+rh varchar(50),
+contactno varchar(200),
+reqdate datetime);
+
+
+create table feedbacks(
+feedbackid int primary key auto_increment,
+name varchar(200),
+email varchar(200),
+subject varchar(200),
+messege varchar(200),
+timeofentry datetime);
+
+create table userdocs(
+userid int primary key,
+username varchar(200),
+image varchar(200)
+);
+
+create table admindocs(
+userid int primary key,
+username varchar(200),
+image varchar(200)
+);
+
+create table messages(
+messageid int primary key auto_increment,
+userid int,
+username varchar(200),
+description varchar(500),
+sendtime datetime
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

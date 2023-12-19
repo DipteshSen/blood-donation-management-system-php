@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Site favicon -->
+  <link rel="shortcut icon" href="../img/blood.png">
+<link rel="stylesheet" type="text/css" href="dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js">
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/switchery.min.css">
+    <link rel="stylesheet" href="css/base.css">
+<style type="text/css">
+  .countstat{
+    border:0.5px solid dimgray;
+    border-radius: 5px;
+    background: linear-gradient(152deg,red,violet,violet);
+    text-align: center;
+  }
+
+  main{
+    max-height: 600px;
+  }
+
+  .count{
+    animation: counter ;
+  }
+
+  .tablinks{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+  }
+  .tablinks:hover{
+    text-decoration: none;
+    color: darkred;
+    transition: 0.5s;
+  }
+
+  nav{
+    box-shadow: 0px 0px 5px orangered;
+  }
+</style>
+  
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <frameset cols="20%,80%">
+      <frame style="overflow-y: auto;">
+    <main style="margin-left: 100px;overflow-y: auto;">
+      <h4 style="font-size: x-large; font-weight: 700;" class="mt-3 mb-3">Admin Dashboard</h4>
+      <!--blood pouches container begins here-->
+      <div class="container">
+        <div class="row">
+          <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 154</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_a-positive_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+          <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 65</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_a-negative_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+
+          <!------------>
+           <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 82</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_b-positive_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+          <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 142</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_b-negative_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+
+        </div>
+
+        <!---2nd row starts--->
+        <div class="row">
+          <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 111</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_ab-positive_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+          <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 641</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_ab-negative_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+
+          <!------------>
+           <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 196</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_o-positive_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+          <div class="ml-1 mr-2 mt-1 mb-3 col-lg-2 col-md-5 col-xs-5 col-sm-5 bg-light text-dark">
+            <h2 class="pull-right">
+             <strong> 221</strong>
+
+            </h2>
+            <img class="mt-2" style="height:64px;width: 75px;" src="https://www.blood.ca/sites/default/files/icon/blood-types_o-negative_blood-drop.jpg">
+            
+            <center><p>POUCHES</p></center>
+          </div>
+
+        </div>
+       
+        </div>
+      </div>
+      <!-----blood pouches container ends here--->
+      <!--<div style="display:inline">
+      <div class="container">
+        <div id="myPlot" class="container"  style="max-width: 450px;margin-left:-25px ;"></div>
+      </div>
+      <div class="container">
+        jik
+      </div>
+    </div>-->
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-xs-11">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div class="">
+        <div class="card-top">
+          <h2>Blood Stock</h2></div>
+    <div id="piechart" style="height: 300px;"></div>
+    <!--<div class="card-block">
+              <h2>Daily usage</h2>
+              <div class="area-chart"></div>
+            </div>-->
+  </div>
+
+      
+    </div>
+
+
+    <div class="col-lg-7 col-xs-11">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div class="">
+        <!--<div class="card-top">
+          <h2>Blood Stock</h2></div>
+    <div id="piechart"></div>-->
+    <div class="card-top">
+          <h2>Daily Visitors</h2></div>
+    <div id="myPlot" style="height:300px;max-width:600px;overflow-x: auto;"></div>
+  </div>
+
+      
+    </div>
+  </div>
+
+      
+
+
+
+    </main>
+  </frame>
+    <frame>
+    <nav class="sidebar">
+      <div class="sidebar-inner">
+        <header class="sidebar-header">
+          <button
+            type="button"
+            class="sidebar-burger"
+            onclick="toggleSidebar()"
+            style="transition: 0.5s;border:none;outline: none;"
+          ></button>
+          <!--<img src="https://raw.githubusercontent.com/frontend-joe/css-sidebars/2e9e0d71cc44e88acec1617897224c5289240001/sidebar-1/assets/blocklord-logo.png" class="sidebar-logo" />-->
+          <a href="#" id="homearia"><h4 style="padding-top: ;">HOME</h4></a>
+        </header>
+        
+          <nav class="sidebar-menu">
+          <a href="dashboard.php" style="text-decoration: none;"><button type="button" class="button">
+            <img id="img" src="../img/house.svg" />
+            <span id="span">Dashboard</span>
+          </button></a>
+          <a href="notification.php" style="text-decoration: none;">
+          <button type="button" class="button" class="has-border">
+            <img id="img" src="../img/noti.svg" />
+            <span id="span">Announcement</span>
+          </button></a>
+          <a href="blood-requests.php" style="text-decoration: none;">
+          <button type="button" class="button">
+            <img id="img" src="../img/blood-svgrepo-com.svg" />
+            <span id="span">Blood Requests</span>
+          </button></a>
+          <a href="blood-donors.php" style="text-decoration: none;">
+          <button type="button" class="button">
+            <img id="img" src="../img/give.png" />
+            <span id="span">Donor Requests</span>
+          </button></a>
+          <button type="button" class="button">
+            <img id="img" src="https://raw.githubusercontent.com/frontend-joe/css-sidebars/2e9e0d71cc44e88acec1617897224c5289240001/sidebar-1/assets/icon-speaker.svg" />
+            <span id="span">AudioVibe</span>
+          </button>
+          <button type="button" class="button" class="has-border">
+            <img id="img" src="https://raw.githubusercontent.com/frontend-joe/css-sidebars/2e9e0d71cc44e88acec1617897224c5289240001/sidebar-1/assets/icon-acoustic.svg" />
+            <span id="span">SoundBlast</span>
+          </button>
+          <a href="change-password.php" style="text-decoration: none;">
+          <button type="button" class="button">
+            <img id="img" src="../img/password.png" />
+            <span id="span">Change Password</span>
+          </button></a>
+          <a href="logout.php" style="text-decoration: none;"><button type="button" class="button">
+            <img id="img" src="../img/sign-out-thin-white.svg" />
+            <span id="span">Log out</span>
+          </button></a>
+          <a href="admin-profile.php" style="text-decoration: none;">
+          <button type="button" class="button">
+            <img id="img" src="../img/user-circle-alt.svg" />
+            <span id="span">Your Profile</span>
+          </button></a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</frame>
+
+</frameset>
+
+    <script type="text/javascript">
+      const toggleSidebar = () => document.body.classList.toggle("open");
+    </script>
+  </body>
+</html>
+
+<script>
+/*const xArray = ["A+", "A-", "B+", "B-", "AB+","AB-","O+","O-"];
+const yArray = [15, 15, 15, 15, 5,5,10,10];
+
+const layout = {title:"Blood Stock"};
+
+const data = [{labels:xArray, values:yArray, hole:0, type:"pie"}];
+
+Plotly.newPlot("myPlot", data, layout);*/
+</script>
+
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Language', 'Speakers (in millions)'],
+          ['Group A',  113],
+          ['Group B',  154],
+          ['Group O', 80],
+          ['Group AB', 43]
+        ]);
+
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        title: '',
+        pieStartAngle: 100,
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+ // daily usage
+    /*$('#daily-usage .area-chart').highcharts({
+        title: {
+            text: '',
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: '300'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Time share',
+            data: [
+                ['Front yard', 10.38],
+                ['Closet', 26.33],
+                ['Swin pool', 51.03],
+                ['Like a boss', 4.77],
+                ['Barking', 3.93]
+            ]
+        }]
+    });*/
+    </script>
+    <script>
+const xArray = [50,60,70,80,90,100,110,120,130,140,150];
+const yArray = [7,8,8,9,9,9,10,11,14,14,15];
+
+// Define Data
+const data = [{
+  x: xArray,
+  y: yArray,
+  mode:"lines"
+}];
+
+// Define Layout
+const layout = {
+  xaxis: {range: [40, 160], title: "Visitor Count"},
+  yaxis: {range: [5, 16], title: "Days of Month"},  
+  title: "Visitors' Timeline"
+};
+
+// Display using Plotly
+Plotly.newPlot("myPlot", data, layout);
+</script>
+
+
+

@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:  #ffe6ff;
+}
+
+#homearia{
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  font-family: bahnschrift;
+}
+
+#homearia:hover{
+  color:#cccccc;
+  transition: 0.3s;
+}
+
+button.button{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover{
+  transform: translateY(-5px);
+  transition: 0.3s;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100%;
+  background: linear-gradient(blueviolet,yellow,orange);
+  transition: width 0.2s;
+}
+
+body.open .sidebar {
+  width: 260px;
+}
+
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 1.25rem 0 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-burger {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  background: url(https://raw.githubusercontent.com/frontend-joe/css-sidebars/2e9e0d71cc44e88acec1617897224c5289240001/sidebar-1/assets/icon-burger.svg) no-repeat center center;
+}
+
+body.open .sidebar-burger {
+  background: url(https://raw.githubusercontent.com/frontend-joe/css-sidebars/2e9e0d71cc44e88acec1617897224c5289240001/sidebar-1/assets/icon-close.svg) no-repeat no-repeat center center;
+}
+
+.sidebar-logo {
+  height: 20px;
+}
+
+.sidebar-menu {
+  display: grid;
+}
+
+button{
+  outline: none;
+}
+
+
+.button {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  height: 60px;
+  font-family: Bahnschrift;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 25px;
+  margin-left: 23px;
+  outline: none;
+}
+
+.button:focus{
+  outline: none;
+}
+
+.button:active{
+  outline: none;
+}
+
+
+
+button.has-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+}
+
+#img {
+  width: 24px;
+  height: 24px;
+}
+
+#span {
+  color: black;
+  font-weight:400;
+}
